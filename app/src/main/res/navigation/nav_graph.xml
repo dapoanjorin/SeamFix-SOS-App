@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/EmergencyFragment">
+
+    <fragment
+        android:id="@+id/EmergencyFragment"
+        android:name="com.seamfix.sosapp.views.fragments.EmergencyFragment"
+        tools:layout="@layout/fragment_emergency">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/InfoFragment" />
+        <action
+            android:id="@+id/action_EmergencyFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InfoFragment"
+        android:name="com.seamfix.sosapp.views.fragments.InfoFragment"
+        tools:layout="@layout/fragment_info">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/EmergencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.seamfix.sosapp.views.fragments.CameraFragment"
+        android:label="CameraFragment" />
+</navigation>
